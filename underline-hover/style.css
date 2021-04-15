@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #fff;
+}
+
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75em 0.125em;
+    position: relative;
+    color: rgb(13, 122, 8);
+    top: 8em;
+    font-size: 4em;
+}
+
+a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(8, 113, 17);
+    width: 0;
+    transition: width 0.3s ease 0s , left 0.3s ease 0s;
+}
+a:hover::after{
+    width: 100%;
+    left: 0;
+}

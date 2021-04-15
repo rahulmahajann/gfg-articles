@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: rgb(7, 132, 32);
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    white-space: nowrap;
+    perspective: 2000;
+}
+
+span{
+    display: inline-block;
+    animation: jump infinite  1s cubic-bezier(0 , .55 , .15 , 1.09);
+    animation-fill-mode: forwards;
+    transform: rotateX(80deg);
+    margin: 0 -.5em;
+    transform-origin: 50% 100%;
+    margin: 2em;
+}
+
+@keyframes roll{
+    0%{
+        transform: rotateX(80deg);
+    }
+    100%{
+        transform: rotateX(0);
+    }
+}
+
+@keyframes jump{
+    0%{
+        transform: translateY(-2em);
+    }
+    40%{
+        transform: translateY(0);
+    }
+    80%{
+        transform: translateY(-1em);
+    }
+    90%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-2em);
+    }
+
+}
+
+span:first-child{
+    /* animation: jump ; */
+    animation-delay: 0.2s;
+}
+
+span:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+span:last-child{
+    animation-delay: 0.6s;
+}
